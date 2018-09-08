@@ -1,8 +1,3 @@
 'use strict'
-
-const fn = () => fn
-
-module.exports = {
-  assert: fn,
-  complement: fn
-}
+const assert = () => assert
+module.exports = assert

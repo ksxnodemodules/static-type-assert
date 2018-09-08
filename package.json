@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/static-type-assert/issues"
   },
-  "homepage": "https://github.com/ksxnodemodules/static-type-assert#readme",
-  "dependencies": {
-    "utility-types": "^2.0.0"
-  }
+  "homepage": "https://github.com/ksxnodemodules/static-type-assert#readme"
 }
