@@ -14,7 +14,7 @@ Asserting type with help of TypeScript compiler
 Example: `pass.ts`
 
 ```typescript
-import {assert} from 'static-assert'
+import assert from 'static-assert'
 
 // Comma-separated parameters
 assert<string>('hello', 'world')
@@ -30,7 +30,7 @@ assert<string | number>('a', 0)('c', 'd')(1, 2)
 Example: `fail.ts`
 
 ```typescript
-import {assert} from 'static-assert'
+import assert from 'static-assert'
 assert<number>('abc') // Expected Error: Argument of type '"abc"' is not assignable to type 'number'
 ```
 
