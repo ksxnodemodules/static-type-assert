@@ -54,4 +54,4 @@ tsc --noEmit fail.ts # Expects errors
 
 ## License
 
-[MIT](https://git.io/vhaEz) © [Hoàng Văn Khải](https://github.com/KSXGitHub)
+[MIT](https://git.io/fA2Ff) © [Hoàng Văn Khải](https://github.com/KSXGitHub)
