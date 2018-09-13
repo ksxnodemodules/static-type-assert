@@ -1,0 +1,18 @@
+dependencies:
+  typescript-compare: 0.0.0
+packages:
+  /typescript-compare/0.0.0:
+    dependencies:
+      typescript-logic: 0.0.0
+    dev: false
+    resolution:
+      integrity: sha512-WuGIIbeH6s6i06WaExp0hrtiHC6L34+HDGQdm8HnKhEuOws36TXubri7L6nOQz1GFaRfR2xY94L+bojDnkEaww==
+  /typescript-logic/0.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  typescript-compare: ^0.0.0
