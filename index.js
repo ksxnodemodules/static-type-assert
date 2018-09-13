@@ -1,3 +1,9 @@
 'use strict'
 const assert = () => assert
-module.exports = assert
+module.exports = Object.assign(assert, {
+  isTrue: assert,
+  isFalse: assert,
+  extension: assert,
+  equality: assert,
+  inequality: assert
+})
