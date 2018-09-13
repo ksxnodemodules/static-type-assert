@@ -9,7 +9,7 @@ declare namespace assert {
   function inequality<A, B> (expect: NotEqual<A, B>): typeof assert
 
   type Extends<A, B, True = true, False = false> =
-    A extends B ? True : False
+    [A] extends [B] ? True : False
 
   type Compare<A, B, Options extends Compare.Options = Compare.Options.Default> =
     [A] extends [B]
