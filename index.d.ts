@@ -12,13 +12,16 @@ declare namespace assert {
     [A] extends [B] ? True : False
 
   type Compare<A, B, Options extends Compare.Options = Compare.Options.Default> =
-    [A] extends [B]
-      ? [B] extends [A]
-        ? Options['equal']
-        : Options['broaderRight']
-      : [B] extends [A]
-        ? Options['broaderLeft']
-        : Options['mismatch']
+    Extends<A, B,
+      Extends<B, A,
+        Options['equal'],
+        Options['broaderRight']
+      >,
+      Extends<B, A,
+        Options['broaderLeft'],
+        Options['mismatch']
+      >
+    >
 
   namespace Compare {
     interface Options {
