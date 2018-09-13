@@ -44,6 +44,15 @@ declare namespace assert {
   type NotEqual<A, B, True = true, False = false> =
     Equal<A, B, False, True>
 
+  type Any<Type, True = true, False = false> = And<
+    Extends<Type, 0>,
+    Extends<Type, 1>,
+    True,
+    False
+  >
+
+  type NotAny<Type, True = true, False = true> = Not<Any<Type>, True, False>
+
   type Not<X extends boolean, True = true, False = false> =
     X extends true ? False : True
 
