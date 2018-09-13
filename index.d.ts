@@ -8,16 +8,26 @@ declare namespace assert {
   function equality<A, B> (expect: Equal<A, B>): typeof assert
   function inequality<A, B> (expect: NotEqual<A, B>): typeof assert
 
-  type Extends<A, B, True = true, False = false> =
-    [A] extends [B] ? True : False
+  type If<Boolean extends boolean, WhenTrue, WhenFalse> =
+    Boolean extends true ? WhenTrue : WhenFalse
+
+  type Extends<A, B> = Or<
+    Any<B>,
+    If<Any<A>,
+      Any<B>,
+      _Extends<A, B>
+    >
+  >
+
+  type _Extends<A, B> = [A] extends [B] ? true : false
 
   type Compare<A, B, Options extends Compare.Options = Compare.Options.Default> =
-    Extends<A, B,
-      Extends<B, A,
+    If<Extends<A, B>,
+      If<Extends<B, A>,
         Options['equal'],
         Options['broaderRight']
       >,
-      Extends<B, A,
+      If<Extends<B, A>,
         Options['broaderLeft'],
         Options['mismatch']
       >
@@ -41,32 +51,34 @@ declare namespace assert {
     }
   }
 
-  type Equal<A, B, True = true, False = false> =
-    Extends<A, B, Extends<B, A, True, False>, False>
-
-  type NotEqual<A, B, True = true, False = false> =
-    Equal<A, B, False, True>
-
-  type Any<Type, True = true, False = false> = And<
-    Extends<Type, 0>,
-    Extends<Type, 1>,
-    True,
-    False
+  type Equal<A, B> = Or<
+    And<Any<A>, Any<B>>,
+    And<
+      And<NotAny<A>, NotAny<B>>,
+      And<Extends<A, B>, Extends<B, A>>
+    >
   >
 
-  type NotAny<Type, True = true, False = true> = Not<Any<Type>, True, False>
+  type NotEqual<A, B> = Not<Equal<A, B>>
 
-  type Not<X extends boolean, True = true, False = false> =
-    X extends true ? False : True
+  type Any<Type> = And<
+    _Extends<Type, 0>,
+    _Extends<Type, 1>
+  >
 
-  type And<A extends boolean, B extends boolean, True = true, False = false> =
-    LogicalTable<A, B, True, False, False, False>
+  type NotAny<Type, True = true, False = true> = Not<Any<Type>>
 
-  type Or<A extends boolean, B extends boolean, True = true, False = false> =
-    LogicalTable<A, B, True, True, True, False>
+  type Not<X extends boolean> =
+    X extends true ? false : true
 
-  type Xor<A extends boolean, B extends boolean, True = true, False = false> =
-    LogicalTable<A, B, False, True, True, False>
+  type And<A extends boolean, B extends boolean> =
+    LogicalTable<A, B, true, false, false, false>
+
+  type Or<A extends boolean, B extends boolean> =
+    LogicalTable<A, B, true, true, true, false>
+
+  type Xor<A extends boolean, B extends boolean> =
+    LogicalTable<A, B, false, true, true, false>
 
   type LogicalTable<A extends boolean, B extends boolean, AB, AnB, nAB, nAnB> =
     A extends true
