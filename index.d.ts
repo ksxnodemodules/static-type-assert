@@ -43,6 +43,22 @@ declare namespace assert {
 
   type NotEqual<A, B, True = true, False = false> =
     Equal<A, B, False, True>
+
+  type Not<X extends boolean> = X extends true ? false : true
+
+  type And<A extends boolean, B extends boolean, True = true, False = false> =
+    LogicalTable<A, B, True, False, False, False>
+
+  type Or<A extends boolean, B extends boolean, True = true, False = false> =
+    LogicalTable<A, B, True, True, True, False>
+
+  type Xor<A extends boolean, B extends boolean, True = true, False = false> =
+    LogicalTable<A, B, False, True, True, False>
+
+  type LogicalTable<A extends boolean, B extends boolean, AB, AnB, nAB, nAnB> =
+    A extends true
+      ? B extends true ? AB : AnB
+      : B extends true ? nAB : nAnB
 }
 
 export = assert
