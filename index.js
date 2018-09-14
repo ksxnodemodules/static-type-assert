@@ -6,6 +6,7 @@ module.exports = Object.assign(assert, {
   isFalse: assert,
   extension: assert,
   compare: assert,
+  strictCompare: assert,
   equality: assert,
   inequality: assert
 })
