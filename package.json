@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ksxnodemodules/static-type-assert#readme",
   "dependencies": {
-    "typescript-compare": "^0.0.0"
+    "typescript-compare": "^0.0.2"
   },
   "peerDependencies": {
     "typescript": "^3.0.3"
