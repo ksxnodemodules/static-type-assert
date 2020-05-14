@@ -5,16 +5,12 @@ import {
   NotEqual
 } from 'typescript-compare'
 
-declare function assert<Type> (value: Type, ...values: Type[]): typeof assert
-
-declare namespace assert {
-  function isTrue<Type extends true> (_?: Type): typeof assert
-  function isFalse<Type extends false> (_?: Type): typeof assert
-  function extension<A, B> (expect: Extends<A, B>): typeof assert
-  function compare<A, B> (expect: Compare<A, B>): typeof assert
-  function strictCompare<A, B> (expect: Compare.Strict<A, B>): typeof assert
-  function equality<A, B> (expect: Equal<A, B>): typeof assert
-  function inequality<A, B> (expect: NotEqual<A, B>): typeof assert
-}
-
-export = assert
+export declare function assert<Type> (value: Type, ...values: Type[]): void
+export declare function isTrue<Type extends true> (_?: Type): void
+export declare function isFalse<Type extends false> (_?: Type): void
+export declare function extension<A, B> (expect: Extends<A, B>): void
+export declare function compare<A, B> (expect: Compare<A, B>): void
+export declare function strictCompare<A, B> (expect: Compare.Strict<A, B>): void
+export declare function equality<A, B> (expect: Equal<A, B>): void
+export declare function inequality<A, B> (expect: NotEqual<A, B>): void
+export default assert

@@ -8,5 +8,8 @@ module.exports = Object.assign(assert, {
   compare: assert,
   strictCompare: assert,
   equality: assert,
-  inequality: assert
+  inequality: assert,
+  default: assert
 })
+
+Object.defineProperty(assert, '__esModule', { value: true })
