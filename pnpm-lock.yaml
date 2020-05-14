@@ -1,9 +1,65 @@
 dependencies:
   typescript-compare: 0.0.2
 devDependencies:
+  '@sane-fmt/wasm32-wasi': 0.2.22
   typescript: 3.9.2
 lockfileVersion: 5.1
 packages:
+  /@sane-fmt/wasm32-wasi/0.2.22:
+    dependencies:
+      '@types/node': 13.13.6
+      '@wasmer/wasi': 0.10.2
+      tslib: 1.12.0
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-pmiHPPfWafGam1SsxuxDyRV7Toey97V8suawWH7fDFEuhsgOxATL78edh4ifQehN0ErABthqMlavIDIzHtaYRg==
+  /@types/node/13.13.6:
+    dev: true
+    resolution:
+      integrity: sha512-zqRj8ugfROCjXCNbmPBe2mmQ0fJWP9lQaN519hwunOgpHgVykme4G6FW95++dyNFDvJUk4rtExkVkL0eciu5NA==
+  /@wasmer/wasi/0.10.2:
+    dependencies:
+      browser-process-hrtime: 1.0.0
+      buffer-es6: 4.9.3
+      path-browserify: 1.0.1
+      randomfill: 1.0.4
+    dev: true
+    resolution:
+      integrity: sha512-zEcZnGmPcO+b6o95W+uF4AK4oGBvBaM6oyyIOH1Kv/Sigy/knRMmawHWPDdJlImYmea7NLvn6PwdN+XJBYSz5A==
+  /browser-process-hrtime/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
+  /buffer-es6/4.9.3:
+    dev: true
+    resolution:
+      integrity: sha1-8mNHuC33b9N+GLy1KIxJcM/VxAQ=
+  /path-browserify/1.0.1:
+    dev: true
+    resolution:
+      integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==
+  /randombytes/2.1.0:
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: true
+    resolution:
+      integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
+  /randomfill/1.0.4:
+    dependencies:
+      randombytes: 2.1.0
+      safe-buffer: 5.2.1
+    dev: true
+    resolution:
+      integrity: sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==
+  /safe-buffer/5.2.1:
+    dev: true
+    resolution:
+      integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
+  /tslib/1.12.0:
+    dev: true
+    resolution:
+      integrity: sha512-5rxCQkP0kytf4H1T4xz1imjxaUUPMvc5aWp0rJ/VMIN7ClRiH1FwFvBt8wOeMasp/epeUnmSW6CixSIePtiLqA==
   /typescript-compare/0.0.2:
     dependencies:
       typescript-logic: 0.0.0
@@ -22,5 +78,6 @@ packages:
     resolution:
       integrity: sha512-q2ktq4n/uLuNNShyayit+DTobV2ApPEo/6so68JaD5ojvc/6GClBipedB9zNWYxRSAlZXAe405Rlijzl6qDiSw==
 specifiers:
+  '@sane-fmt/wasm32-wasi': ^0.2.22
   typescript: ~3.9.2
   typescript-compare: ^0.0.2
