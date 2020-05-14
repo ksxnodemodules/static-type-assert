@@ -20,8 +20,9 @@
   "homepage": "https://github.com/ksxnodemodules/static-type-assert#readme",
   "scripts": {
     "fmt": "sane-fmt --write index.d.ts index.js test.ts",
+    "test:tsc": "tsc --noEmit",
     "test:fmt": "sane-fmt index.d.ts index.js test.ts",
-    "test": "tsc --noEmit && pnpm run test:fmt"
+    "test": "pnpm run test:tsc && pnpm run test:fmt"
   },
   "dependencies": {
     "typescript-compare": "^0.0.2"
