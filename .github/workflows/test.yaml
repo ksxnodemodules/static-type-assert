@@ -1,0 +1,50 @@
+name: Test
+
+jobs:
+  tsc:
+    name: Type Check
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - 14.1.0
+        pnpm:
+          - 4.11.1
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.vars.node }}
+      - name: Cache PNPM store
+        uses: actions/cache@v1.1.2
+        with:
+          path: ~/.pnpm-store
+          key: pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+            pnpm-
+      - name: Install pnpm
+        uses: pnpm/action-setup@v1.2.0
+        with:
+          version: ${{ matrix.pnpm }}
+          run_install: 'true'
+      - name: Type Check
+        run: |
+          pnpm run test:tsc
+
+  fmt:
+    name: Code Style
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: KSXGitHub/github-actions-sane-fmt@0.2.22
+        with:
+          args: |
+            - --details=diff
+            - index.d.ts
+            - index.js
+            - test.ts
