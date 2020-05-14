@@ -1,2 +1,4 @@
 shrinkwrap.yaml
 renovate.*
+test.ts
+/.vscode

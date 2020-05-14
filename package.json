@@ -18,6 +18,9 @@
     "url": "https://github.com/ksxnodemodules/static-type-assert/issues"
   },
   "homepage": "https://github.com/ksxnodemodules/static-type-assert#readme",
+  "scripts": {
+    "test": "tsc --noEmit"
+  },
   "dependencies": {
     "typescript-compare": "^0.0.2"
   },
