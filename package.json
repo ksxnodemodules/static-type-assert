@@ -21,6 +21,9 @@
   "dependencies": {
     "typescript-compare": "^0.0.2"
   },
+  "devDependencies": {
+    "typescript": "~3.9.2"
+  },
   "peerDependencies": {
     "typescript": "^3.0.3"
   }

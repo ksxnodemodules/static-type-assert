@@ -1,0 +1,26 @@
+dependencies:
+  typescript-compare: 0.0.2
+devDependencies:
+  typescript: 3.9.2
+lockfileVersion: 5.1
+packages:
+  /typescript-compare/0.0.2:
+    dependencies:
+      typescript-logic: 0.0.0
+    dev: false
+    resolution:
+      integrity: sha512-8ja4j7pMHkfLJQO2/8tut7ub+J3Lw2S3061eJLFQcvs3tsmJKp8KG5NtpLn7KcY2w08edF74BSVN7qJS0U6oHA==
+  /typescript-logic/0.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
+  /typescript/3.9.2:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-q2ktq4n/uLuNNShyayit+DTobV2ApPEo/6so68JaD5ojvc/6GClBipedB9zNWYxRSAlZXAe405Rlijzl6qDiSw==
+specifiers:
+  typescript: ~3.9.2
+  typescript-compare: ^0.0.2
