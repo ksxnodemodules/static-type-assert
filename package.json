@@ -28,7 +28,7 @@
     "typescript-compare": "^0.0.2"
   },
   "devDependencies": {
-    "@sane-fmt/wasm32-wasi": "^0.2.23",
+    "@sane-fmt/wasm32-wasi": "^0.3.0",
     "typescript": "~3.9.2"
   },
   "peerDependencies": {
