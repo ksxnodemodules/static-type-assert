@@ -1,6 +1,6 @@
 {
   "name": "static-type-assert",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Asserting type with help of TypeScript compiler",
   "main": "index.js",
   "repository": {
