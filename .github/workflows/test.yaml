@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.vars.node }}
       - name: Cache PNPM store
-        uses: actions/cache@v1.1.2
+        uses: actions/cache@v1.2.0
         with:
           path: ~/.pnpm-store
           key: pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
