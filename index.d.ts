@@ -1,9 +1,4 @@
-import {
-  Extends,
-  Compare,
-  Equal,
-  NotEqual,
-} from 'typescript-compare'
+import { Extends, Compare, Equal, NotEqual } from 'typescript-compare'
 
 export declare function assert<Type>(value: Type, ...values: Type[]): void
 export declare function isTrue<Type extends true>(_?: Type): void
