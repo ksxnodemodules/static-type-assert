@@ -20,11 +20,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.vars.node }}
       - name: Cache PNPM store
-        uses: actions/cache@v1.2.0
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.pnpm-store
           key: pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -32,7 +32,7 @@ jobs:
             pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
             pnpm-
       - name: Install pnpm
-        uses: pnpm/action-setup@v1.2.0
+        uses: pnpm/action-setup@v1.2.1
         with:
           version: ${{ matrix.pnpm }}
           run_install: 'true'
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: sane-fmt/action@0.6.3
+      - uses: sane-fmt/action@0.7.5
         with:
           args: |
             - --details=diff
