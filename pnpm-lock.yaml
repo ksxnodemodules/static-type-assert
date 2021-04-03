@@ -1,11 +1,11 @@
 dependencies:
   typescript-compare: 0.0.2
 devDependencies:
-  '@sane-fmt/wasm32-wasi': 0.8.0
+  '@sane-fmt/wasm32-wasi': 0.8.7
   typescript: 4.0.2
 lockfileVersion: 5.2
 packages:
-  /@sane-fmt/wasm32-wasi/0.8.0:
+  /@sane-fmt/wasm32-wasi/0.8.7:
     dependencies:
       '@types/node': 13.13.6
       '@wasmer/wasi': 0.11.2
@@ -13,7 +13,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-ld14S6zC492488HJjPy3Lb9E7eS5xxYKBrwtE9ccxSxY60BcoWAHxgmcUIcVl17xzYq5+BgH6h/z7dlX5V6BqA==
+      integrity: sha512-pLA7RxfN1TfutFGYzlWDzog0V8Tn15cvyrXnYN04JWBJ1OQY9f7oyLUTVfbWC0+obq8mwb34Zh+8k4zXZnqWnw==
   /@types/node/13.13.6:
     dev: true
     resolution:
@@ -78,6 +78,6 @@ packages:
     resolution:
       integrity: sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
 specifiers:
-  '@sane-fmt/wasm32-wasi': ^0.8.0
+  '@sane-fmt/wasm32-wasi': ^0.8.7
   typescript: ~4.0.0
   typescript-compare: ^0.0.2
