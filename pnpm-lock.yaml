@@ -1,83 +1,87 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@sane-fmt/wasm32-wasi': ^0.10.0
+  typescript: ~4.0.0
+  typescript-compare: ^0.0.2
+
 dependencies:
   typescript-compare: 0.0.2
+
 devDependencies:
-  '@sane-fmt/wasm32-wasi': 0.9.0
+  '@sane-fmt/wasm32-wasi': 0.10.0
   typescript: 4.0.2
-lockfileVersion: 5.2
+
 packages:
-  /@sane-fmt/wasm32-wasi/0.9.0:
+
+  /@sane-fmt/wasm32-wasi/0.10.0:
+    resolution: {integrity: sha512-qgAWNjuVC2XJw58FR/wBe/XfBIijWUIzRZxMw03fRVeugS6N69Y17tCthC5l4FYH9Qg+bNypxL5Ve+G2mBz0jA==}
+    engines: {node: '>= 14.0.0'}
+    hasBin: true
     dependencies:
-      '@types/node': 13.13.6
-      '@wasmer/wasi': 0.11.2
+      '@types/node': 14.17.5
+      '@wasmer/wasi': 0.12.0
       tslib: 2.0.0
     dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-+nIVjMp64BwPNn11ZSjPo46NJSLienMt3QUlz7JS/lZjJiHe6qUT/Z6Y1tMPWmQyOaW5E6iHgOciboI+jDJwZw==
-  /@types/node/13.13.6:
+
+  /@types/node/14.17.5:
+    resolution: {integrity: sha512-bjqH2cX/O33jXT/UmReo2pM7DIJREPMnarixbQ57DOOzzFaI6D2+IcwaJQaJpv0M1E9TIhPCYVxrkcityLjlqA==}
     dev: true
-    resolution:
-      integrity: sha512-zqRj8ugfROCjXCNbmPBe2mmQ0fJWP9lQaN519hwunOgpHgVykme4G6FW95++dyNFDvJUk4rtExkVkL0eciu5NA==
-  /@wasmer/wasi/0.11.2:
+
+  /@wasmer/wasi/0.12.0:
+    resolution: {integrity: sha512-FJhLZKAfLWm/yjQI7eCRHNbA8ezmb7LSpUYFkHruZXs2mXk2+DaQtSElEtOoNrVQ4vApTyVaAd5/b7uEu8w6wQ==}
     dependencies:
       browser-process-hrtime: 1.0.0
       buffer-es6: 4.9.3
       path-browserify: 1.0.1
       randomfill: 1.0.4
     dev: true
-    resolution:
-      integrity: sha512-9Oi68ZsD8HTZRjWj5VvnhN0dLL6nSacrgGvdwJeHd9q5bMrlFaXTckQAYm84zXJWg+b5yeFhaEZqGEhe7q4VFQ==
+
   /browser-process-hrtime/1.0.0:
+    resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
     dev: true
-    resolution:
-      integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
+
   /buffer-es6/4.9.3:
+    resolution: {integrity: sha1-8mNHuC33b9N+GLy1KIxJcM/VxAQ=}
     dev: true
-    resolution:
-      integrity: sha1-8mNHuC33b9N+GLy1KIxJcM/VxAQ=
+
   /path-browserify/1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
-    resolution:
-      integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==
+
   /randombytes/2.1.0:
+    resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
       safe-buffer: 5.2.1
     dev: true
-    resolution:
-      integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
+
   /randomfill/1.0.4:
+    resolution: {integrity: sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==}
     dependencies:
       randombytes: 2.1.0
       safe-buffer: 5.2.1
     dev: true
-    resolution:
-      integrity: sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==
+
   /safe-buffer/5.2.1:
+    resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: true
-    resolution:
-      integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
+
   /tslib/2.0.0:
+    resolution: {integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==}
     dev: true
-    resolution:
-      integrity: sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
+
   /typescript-compare/0.0.2:
+    resolution: {integrity: sha512-8ja4j7pMHkfLJQO2/8tut7ub+J3Lw2S3061eJLFQcvs3tsmJKp8KG5NtpLn7KcY2w08edF74BSVN7qJS0U6oHA==}
     dependencies:
       typescript-logic: 0.0.0
     dev: false
-    resolution:
-      integrity: sha512-8ja4j7pMHkfLJQO2/8tut7ub+J3Lw2S3061eJLFQcvs3tsmJKp8KG5NtpLn7KcY2w08edF74BSVN7qJS0U6oHA==
+
   /typescript-logic/0.0.0:
+    resolution: {integrity: sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==}
     dev: false
-    resolution:
-      integrity: sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
+
   /typescript/4.0.2:
-    dev: true
-    engines:
-      node: '>=4.2.0'
+    resolution: {integrity: sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==}
+    engines: {node: '>=4.2.0'}
     hasBin: true
-    resolution:
-      integrity: sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
-specifiers:
-  '@sane-fmt/wasm32-wasi': ^0.9.0
-  typescript: ~4.0.0
-  typescript-compare: ^0.0.2
+    dev: true
